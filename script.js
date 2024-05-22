@@ -47,6 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
         passwordForm.dataset.index = index;
     };
 
+    window.deletePassword = (index) => {
+        if (confirm('Are you sure you want to delete this password?')) {
+            deletePassword(index);
+        }
+    };
+
     passwordForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = document.getElementById('email').value;
